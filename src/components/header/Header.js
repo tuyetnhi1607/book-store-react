@@ -10,14 +10,8 @@ function Header() {
       <div className="header-logo">
         <img src={logo} alt="" />
       </div>
-      <div className="header-content">
-        <div className="header-content-search">
-           <input placeholder="Search" />
-         <i class="bx bx-search"></i>
-        </div>
-        <div className="header-content-account">
-            <img src={avatar} alt=""/>
-        </div>
+      <div className="header-content-account">
+        <img src={avatar} alt="" />
       </div>
     </div>
   );

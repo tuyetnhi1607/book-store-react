@@ -1,0 +1,47 @@
+
+@use '../../scss/' as *;
+
+.carditem{
+    
+    @include flex(flex-start, flex-start);
+    transform: translateY(-2rem);
+    
+    &-poster{
+        margin: 0 2.5rem;;
+        img{
+            height: 160px;
+            width: 110px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.295), -5px -5px 20px rgba(0, 0, 0, 0.226);
+        }
+    }
+    &-content{
+        padding-right: 2.5rem;
+        color: #fff;
+        padding-bottom:0;
+        transform: translateY(4rem);
+        position: relative;
+        &>* ~ * {
+            margin-bottom: 16px;
+        }
+        &-title{
+            font-size: 1.3rem;
+            font-family: $font-family;
+            font-weight: 700;
+        }
+        &-description{
+            height: 2.5rem;
+            overflow: hidden;
+        }
+        button{
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            color: rgba(179, 8, 65, 0.815);
+            background:rgb(255, 255, 255);
+            padding: 5px 10px;
+            border-radius: 20px;
+         
+        }
+
+    }
+}

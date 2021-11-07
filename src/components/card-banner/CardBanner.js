@@ -9,19 +9,23 @@ function CardBanner(props) {
   const volumeInfo = data.volumeInfo || "";
   const imageLinks = volumeInfo.imageLinks || "";
   const thumbnail = imageLinks.thumbnail || "";
-    console.log("datatttta", data);
+  console.log("datatttta", data);
   return (
     <div className="container">
       <div className="container-poster">
-          <img src={thumbnail} alt=""/>
+        <img src={thumbnail} alt="" />
       </div>
       <div className="container-content">
         <div className="container-content-title">{volumeInfo.title}</div>
-        <div className="container-content-author">{`by ${volumeInfo.authors?volumeInfo.authors[0]:''}`}</div>
+        <div className="container-content-author">{`by ${
+          volumeInfo.authors ? volumeInfo.authors[0] : ""
+        }`}</div>
         <div className="container-content-description">
           {volumeInfo.description}
         </div>
-        <button>See The Book</button>
+        <a href={volumeInfo.infoLink} target="_blank" rel="noreferrer">
+          <button>See The Book</button>
+        </a>
       </div>
     </div>
   );

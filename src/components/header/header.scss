@@ -1,7 +1,7 @@
 @use '../../scss/' as *;
 
 .header{
-    @include flex(center, flex-start);
+    @include flex(center, space-between);
     height: 3rem;
     padding: 2rem 0;
     width: 100%;
@@ -12,37 +12,11 @@
             width: auto;
         }
     }
-    &-content{
-        flex-grow: 1;
-        @include flex(center,space-between);
-        padding-left: 2rem;
-        &-search{
-            @include flex(center, flex-start);
-            input{
-                border-width:0px;
-                border:none;
-                height:2rem;
-                width: 15rem;
-                border-radius: 0.5rem;
-                font-size: 1.1rem;
-                background-color: rgba(133, 132, 131, 0.144);
-            }
-            input:focus{
-                outline-width: 0;
-            }
-            i{
-                margin-left: -2rem;
-                color: rgba(73, 72, 72, 0.774);
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-        }
-        &-account{
-            img{
-                height: 3rem;
-                border-radius: 50%;
-                width: auto;
-            }
+    &-content-account{
+        img{
+            height: 3rem;
+            border-radius: 50%;
+            width: auto;
         }
     }
 }

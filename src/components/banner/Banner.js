@@ -24,9 +24,7 @@ function Banner() {
             <SwiperSlide key={i} className="background">
                 <CardBanner data={item} />
             </SwiperSlide>
-                
             )}
-            
         </Swiper>
     )
 }
